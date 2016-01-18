@@ -1,4 +1,8 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
+
+gem 'haml', '~> 4.0', '>= 4.0.7'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+gem 'devise', '~> 3.5', '>= 3.5.4'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
