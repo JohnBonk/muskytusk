@@ -1,8 +1,7 @@
-#welcome
-	Welcome,
-	= link_to @user.email, @user
-	!
-	
+.show_header
+	Posts by
+	= @user.email
+
 #posts
 	- @posts.each do |post|
 		.post
@@ -10,6 +9,4 @@
 			%p.date
 				Posted
 				= time_ago_in_words(post.created_at)
-				ago by
-				= post.user.email
-
+				ago

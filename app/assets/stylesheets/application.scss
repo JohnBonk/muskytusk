@@ -10,9 +10,24 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require_tree . 
  *= require_self
  */
+
+ body {
+ 	font-family: 'Source Code Pro', sans-serif ;
+ 	background-color: #444444;
+
+ 	a {
+ 		text-decoration: none;
+ 		color: #0094ff
+ 	}
+
+ 	a:visited {
+ 		color: #ffffff;
+ 	}
+
+ }
 
 .wrapper {
 	width: 60%;
@@ -20,9 +35,64 @@
 	margin: 0 auto;
 }
 
-.main_header {
-	width: 80%;
-	max-width: 1440px;
-	margin: 0 auto;
-
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
 }
+
+.clearfix:after {
+	clear: both;
+}
+
+.main_header {
+	width: 100%;
+	margin: 0 auto;
+	background-color: #000000;
+	#logo {
+		float: left;
+    
+		a {
+			font-size: 1.2rem;
+			font-weight: 400;
+			color: #0094ff;
+			display: inline-block;
+		}
+	}
+
+	#buttons {
+		display: inline-block;                       
+		float: right;
+	}
+}
+
+.show_header {
+	font-size: 1.2rem;
+	margin:  2rem 0;
+}
+
+#welcome {
+	margin-bottom: 1rem;
+
+	a {
+		font-weight: 100;
+		color: black;
+	}
+}
+
+
+#posts {
+	.post {
+		margin: 0;
+
+		.title {
+			font-weight: 100;
+			margin: 0;
+		}
+
+		.date {
+			margin-top: .25rem;
+			font-size: .9rem;
+		}
+	}
+}
+
