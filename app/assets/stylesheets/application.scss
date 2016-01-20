@@ -61,12 +61,14 @@
 	}
 
 	#buttons {
-		display: inline-block;                       
-		float: right;
-		line-height: 20px;
-		background-color: #444444;
-		padding: .5em 1em;
-		margin-top: .6rem;
+		a {
+			display: inline-block;                       
+			float: right;
+			line-height: 20px;
+			background-color: #444444;
+			padding: .5em 1em;
+			margin: .6rem 1rem;
+		}
 	}
 }
 
