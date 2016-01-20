@@ -1,14 +1,119 @@
-<h2>Log in</h2>
+<style type="text/css">
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Source Code Pro", sans-serif;
+  background: url(https://images.unsplash.com/photo-1443890923422-7819ed4101c0?ixlib=rb-0.3.5&q=80&fm=jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-form {
+  width: 40%;
+  min-width: 320px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+@media (max-width: 40em) {
+  .log-form {
+    width: 95%;
+    position: relative;
+    margin: 2rem auto;
+    top: 5%;
+    left: 0%;
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+  }
+}
+.log-form form {
+  display: block;
+  width: 100%;
+  padding: 2em;
+}
+.log-form h2 {
+  color: #f3f3f3;
+  font-size: 1.35em;
+  display: block;
+  background: #444444;
+  width: 100%;
+  text-transform: uppercase;
+  padding: .75em 1em .75em 1.5em;
+  border: 1px solid #1d1d1d;
+  margin: 0;
+  font-weight: 100;
+}
+.log-form input {
+  display: block;
+  margin: auto auto;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: .5em 0;
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  color: ;
+}
+.log-form input:focus {
+  outline: none;
+}
+.log-form .btn {
+	margin-bottom: 0;
+
+}
+
+input.btn {
+	background-color: #444444;
+	color: white;
+	text-transform: uppercase;
+}
+
+label {
+	color: #b2b2b2;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+#user_remember_me.boolean.optional {
+	width: auto !important;
+	float: left;
+	margin-top: .2rem;
+    margin-right: .5rem;
+}
+
+
+</style>
+
+<div class="log-form">
+<h2>Welcome Home, Tusky</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
+
     <%= f.input :email, required: false, autofocus: true %>
     <%= f.input :password, required: false %>
+    <div class="checkbox">
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+	</div>
 
   <div class="btn">
     <%= f.button :submit, "Log in" %>
   </div>
 <% end %>
 
+</div>
