@@ -30,7 +30,7 @@
  }
 
 .wrapper {
-	width: 60%;
+	width: 80%;
 	max-width: 1440px;
 	margin: 0 auto;
 }
@@ -48,6 +48,7 @@
 	width: 100%;
 	margin: 0 auto;
 	background-color: #000000;
+	
 	#logo {
 		float: left;
     
@@ -62,6 +63,10 @@
 	#buttons {
 		display: inline-block;                       
 		float: right;
+		line-height: 20px;
+		background-color: #444444;
+		padding: .5em 1em;
+		margin-top: .6rem;
 	}
 }
 
@@ -82,7 +87,8 @@
 
 #posts {
 	.post {
-		margin: 0;
+		margin-top: 1rem;
+		border-bottom: 1px solid #595959;
 
 		.title {
 			font-weight: 100;
@@ -96,3 +102,4 @@
 	}
 }
 
+@import 'normalize'
