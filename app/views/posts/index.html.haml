@@ -1,9 +1,9 @@
 #welcome
 - if user_signed_in?
 	Welcome,
-	= link_to @user.email, @user
+	= @user.email
 	!
-	
+
 #posts
 	- @posts.each do |post|
 		.post

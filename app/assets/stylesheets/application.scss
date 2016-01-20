@@ -20,11 +20,7 @@
 
  	a {
  		text-decoration: none;
- 		color: #0094ff
- 	}
-
- 	a:visited {
- 		color: #ffffff;
+ 		color: #0094ff;
  	}
 
  }
@@ -82,12 +78,16 @@
 
 	a {
 		font-weight: 100;
-		color: black;
+		color: #000000;
 	}
 }
 
 
 #posts {
+	a:visited {
+ 		color: #f3f3f3 !important;
+ 	}
+ 	
 	.post {
 		margin-top: 1rem;
 		border-bottom: 1px solid #595959;
