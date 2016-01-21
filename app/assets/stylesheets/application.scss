@@ -58,6 +58,7 @@
 
 	#buttons {
 		a {
+			color: #f3f3f3;
 			display: inline-block;                       
 			float: right;
 			line-height: 20px;
@@ -119,6 +120,76 @@
 			float: right;
 			display: inline-block;
 		}
+	}
+}
+
+.post_show {
+
+	padding: 0 1rem 2rem 1rem;
+	border-bottom: 1px solid #595959;
+
+	a {
+		color: #595959;
+		float: right;
+		padding-right: 1rem;
+	}
+
+	a:hover, a:active {
+		color: black;
+	}
+
+	p {
+		color: #f3f3f3;
+	}
+}
+
+#comments {
+	.comment {
+
+		background-color: #595959;
+		padding: 1rem;
+		margin-top: 1rem;
+
+		a {
+			color: #444444;
+			float: right;
+			padding-right: 1rem;
+		}
+
+		a:hover, a:active {
+			color: black;
+		}
+
+
+		p {
+			color: #f3f3f3;
+		}
+	}
+
+
+	label {
+		color: #444444;
+	}
+	
+	textarea {
+		background-color: #f3f3f3;
+		width: 100%;
+		min-height: 100px;
+		border-radius: .2em;
+		padding: 0;
+	}
+
+	input {
+		background-color: #444444;
+	    border: none;
+	    color: #f3f3f3;
+	    float: right;
+	    padding-right: 1rem;
+	    margin-bottom: 2rem;
+	}
+
+	input:hover, input:active {
+		color: #0094ff;
 	}
 }
 
