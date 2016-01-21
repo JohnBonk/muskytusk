@@ -13,4 +13,10 @@
 				= time_ago_in_words(post.created_at)
 				ago by
 				= post.user.email
-
+			%p.count
+			- if post.comments.count == 1
+				= post.comments.count 
+				reply
+			- else
+				= post.comments.count 
+				replies

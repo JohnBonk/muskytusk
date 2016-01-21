@@ -1,20 +1,18 @@
 <style type="text/css">
 
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
 * {
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Source Code Pro", sans-serif;
-  background: url(https://images.unsplash.com/photo-1443890923422-7819ed4101c0?ixlib=rb-0.3.5&q=80&fm=jpg) no-repeat center center fixed;
+	   background: url(https://images.unsplash.com/photo-1443890923422-7819ed4101c0?ixlib=rb-0.3.5&q=80&fm=jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-.log-form {
+.log_form {
   width: 40%;
   min-width: 320px;
   background: #fff;
@@ -30,10 +28,10 @@ body {
   overflow: hidden;
 }
 @media (max-width: 40em) {
-  .log-form {
+  .log_form {
     width: 95%;
     position: relative;
-    margin: 2rem auto;
+    margin: 50% auto;
     top: 5%;
     left: 0%;
     -webkit-transform: translate(0%, 0%);
@@ -43,12 +41,12 @@ body {
     transform: translate(0%, 0%);
   }
 }
-.log-form form {
+.log_form form {
   display: block;
   width: 100%;
   padding: 2em;
 }
-.log-form h2 {
+.log_form h2 {
   color: #f3f3f3;
   font-size: 1.35em;
   display: block;
@@ -56,11 +54,10 @@ body {
   width: 100%;
   text-transform: uppercase;
   padding: .75em 1em .75em 1.5em;
-  border: 1px solid #1d1d1d;
   margin: 0;
   font-weight: 100;
 }
-.log-form input {
+.log_form input {
   display: block;
   margin: auto auto;
   width: 100%;
@@ -70,10 +67,10 @@ body {
   border-bottom: 1px solid #eaeaea;
   color: ;
 }
-.log-form input:focus {
+.log_form input:focus {
   outline: none;
 }
-.log-form .btn {
+.log_form .btn {
 	margin-bottom: 0;
 
 }
@@ -100,20 +97,22 @@ label {
 
 </style>
 
-<div class="log-form">
-<h2>Welcome Home, Tusky</h2>
+<div class="log_background">
+	<div class="log_form">
+	<h2>Welcome Home, Tusky</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+	<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <div class="checkbox">
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+	    <%= f.input :email, required: false, autofocus: true %>
+	    <%= f.input :password, required: false %>
+	    <div class="checkbox">
+	    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+		</div>
+
+	  <div class="btn">
+	    <%= f.button :submit, "Log in" %>
+	  </div>
+	<% end %>
+
 	</div>
-
-  <div class="btn">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
 </div>
