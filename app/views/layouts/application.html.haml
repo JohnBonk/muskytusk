@@ -2,21 +2,35 @@
 %html
 %head
 	%title Musky Forum
-	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+	= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
 	%link{rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700,300", type: "text/css"}
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
 	= csrf_meta_tags
 
-%body
-	- if user_signed_in?
-		%header.main_header.clearfix
-			.wrapper
-				#logo
-					%p= link_to "Musky Forum", root_path
-				#buttons
-					= link_to "New Post", new_post_path
-	.wrapper
-		= yield  
 
-	.wrapper
-		%p.notice= notice
+%body
+	#container
+		- if user_signed_in?
+			%header.main_header.clearfix
+				.open-menu
+				.wrapper
+					#logo
+						%p= link_to "MuskyTusk.us", root_path
+					#buttons
+						= link_to "New Post", new_post_path
+					
+		.wrapper
+			= yield  
+
+		.wrapper
+			%p.notice= notice
+
+
+:javascript
+	$( document ).ready(function() {
+	    $( '#container' ).SecretNav({       
+	        navSelector: 'nav',         // selector of the nav tag
+	        openSelector: '.open-menu', // selector of the menu's opener
+	        position: 'top'            // left | top
+	    });
+	});

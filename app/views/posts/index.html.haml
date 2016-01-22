@@ -1,9 +1,3 @@
-#welcome
-- if user_signed_in?
-	Welcome,
-	= @user.email
-	!
-
 #posts
 	- @posts.each do |post|
 		.post
@@ -20,3 +14,9 @@
 			- else
 				= post.comments.count 
 				replies
+
+
+%nav
+	%a{href: "/", class: "current"} Forum
+	%a{href: "/"} About
+	%a{href: "/"} ???
