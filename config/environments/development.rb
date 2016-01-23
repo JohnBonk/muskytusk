@@ -41,14 +41,16 @@ Rails.application.configure do
 
   # Needed for Devise gem
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
+  
   config.paperclip_defaults = {
     :storage => :s3,
-    :bucket => ENV['muskytusk'],
     :s3_credentials => {
-    :access_key_id => ENV['AKIAI4USINTRBAZS47YQ'],
-    :secret_access_key => ENV['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']
-  }
+        :bucket => ENV['S3_BUCKET_NAME'],
+        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    },
+    :url =>':s3_domain_url',
+    :path => '/:class/:attachment/:id_partition/:style/:filename',
 }
 
 end
