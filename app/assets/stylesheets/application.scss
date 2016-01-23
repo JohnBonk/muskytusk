@@ -181,6 +181,12 @@
 	p {
 		color: #f3f3f3;
 	}
+
+	img {
+		margin-top: 1rem;
+		max-width: 100%;
+		max-height: 200px;
+	}
 }
 
 
@@ -201,6 +207,14 @@
 		margin-bottom: 1rem;
 		height: 2rem;
 		width: 40%;
+		color: black;
+	}
+
+	#post_image {
+		float: none;
+		display: inline-block;
+		margin-bottom: .5rem;
+		height: 2rem;
 		color: black;
 	}
 
@@ -284,6 +298,19 @@
 	input:hover, input:active {
 		color: #0094ff;
 	}
+}
+
+iframe {
+	max-width: 100%;
+	display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	
+
 }
 
 @import 'normalize'
