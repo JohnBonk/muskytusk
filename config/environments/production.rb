@@ -82,7 +82,7 @@ Rails.application.configure do
     :s3_credentials => {
     :access_key_id => ENV['AKIAI4USINTRBAZS47YQ'],
     :secret_access_key => ENV['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']
-  }
+  },
   :bucket => ENV['muskytusk']
 }
 end
