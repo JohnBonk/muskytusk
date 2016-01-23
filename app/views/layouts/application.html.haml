@@ -9,8 +9,8 @@
 
 
 %body
-	#container
-		- if user_signed_in?
+	- if user_signed_in?
+		#container
 			%header.main_header.clearfix
 				.open-menu
 				.wrapper
@@ -18,12 +18,17 @@
 						%p= link_to "MuskyTusk.us", root_path
 					#buttons
 						= link_to "New Post", new_post_path
-					
-		.wrapper
-			= yield  
 
-		.wrapper
-			%p.notice= notice
+			.wrapper
+				= yield  
+
+			.wrapper
+				%p.notice= notice
+			
+	- else
+
+
+
 
 
 :javascript
