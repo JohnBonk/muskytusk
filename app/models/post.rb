@@ -9,10 +9,7 @@ class Post < ActiveRecord::Base
   	:region => "us-west-2",
   	:url =>':s3_domain_url',
     :path => '/:class/:attachment/:id_partition/:style/:filename',
-  	:s3_credentials => {
-    :access_key_id => "AKIAI4USINTRBAZS47YQ",
-    :secret_access_key => "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"
-  }
+
   	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 
