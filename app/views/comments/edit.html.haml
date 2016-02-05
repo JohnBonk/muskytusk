@@ -1,5 +1,13 @@
-%h1 Edit Reply
+%h1 Edit Comment
 
-= simple_form_for([@post, @comment]) do |f|
-	= f.input :comment
-	= f.submit
+.post_form
+	= simple_form_for([@post, @comment]) do |f|
+		= f.input :comment
+		= f.submit
+
+	= link_to "Cancel", post_path(@post)
+
+%nav
+	%a{href: "/", class: "current"} Forum
+	%a{href: "/about"} About
+	%a{href: "/"} ???

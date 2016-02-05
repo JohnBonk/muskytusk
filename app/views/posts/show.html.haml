@@ -13,9 +13,14 @@
 	
 
 #comments
-	%h2
-		= @post.comments.count
-		Comments
+	- if @post.comments.count == 1
+		%h2
+			= @post.comments.count
+			Comment
+	- else
+		%h2
+			= @post.comments.count
+			Comments
 	= render @post.comments
 
 	= render "comments/form"
