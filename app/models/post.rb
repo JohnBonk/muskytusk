@@ -4,7 +4,8 @@ class Post < ActiveRecord::Base
 
 	has_attached_file :image, styles: { large: "", thumb: "100x100>" }, default_url: "/images/:style/missing.png",
 	  :storage => :s3,
-
+  	
+  	:bucket => "muskytusk",
   	:region => "us-west-2",
   	:url =>':s3_domain_url',
     :path => '/:class/:attachment/:id_partition/:style/:filename'
